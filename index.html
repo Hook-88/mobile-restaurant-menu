@@ -22,7 +22,7 @@
             </header>
             <main>
                 <div class="container">
-                    <ul>
+                    <ul id="list-of-products">
                         <li>
                             <span class="product-icon">🍕</span>
                             <div class="product-details">
@@ -51,11 +51,26 @@
                             <i class="fa-sharp fa-solid fa-circle-plus add-btn"></i>
                         </li>
                     </ul>
-                </div> 
+                
+                    <section id="order-overview" class="order-overview">
+                        <h2>Your order</h2>
+                        <div class="product-order">
+                            <h2>Pizza</h2>
+                            <button>remove</button>
+                            <h4>$14</h4>
+                        </div>
+                        
+                        <div class="total-price-container">
+                            <h2>Total price</h2>
+                            <h4>$14</h4>
+                        </div>
+                        <button>Complete order</button>
+                    </section> 
+            </div>
             </main>
         </div>
        
-	    <script src="index.js" type="module"></script>
+	    <script src="./index.js" type="module"></script>
     </body>
 </html>
 
