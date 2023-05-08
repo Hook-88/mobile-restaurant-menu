@@ -1,3 +1,79 @@
 body {
     margin: 0;
-} 
+    font-family: 'Smythe', cursive;
+    font-size: 16px;
+}
+
+header {
+    background-image: url('./header-image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom -70px right 0;
+    height: 170px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 67px;
+}
+
+header .container {
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+h2 {
+    margin: 0;
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.main-container {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.container {
+    width: 500px;
+    margin: 0 auto;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+}
+
+ul li {
+    border-bottom: 1px solid lightgrey;
+    display: flex;
+    gap: 30px;
+    height: 140px;
+}
+
+.add-btn{
+margin-left: auto;
+margin-top: 5px;
+}
+
+.product-icon {
+    font-size: 97px;
+}
+
+i {
+font-size: 50px;
+color: lightgray;
+}
