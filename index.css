@@ -13,7 +13,7 @@ header {
     color: #ffffff;
     display: flex;
     align-items: center;
-    margin-bottom: 67px;
+    margin-bottom: 55px;
 }
 
 header .container {
@@ -30,12 +30,18 @@ h1 {
 
 h2 {
     margin: 0;
+    font-size: 28px;
 }
 
 h3 {
     font-size: 23px;
     font-weight: 400;
     margin: 0;
+}
+
+h4 {
+    margin: 0;
+    font-size: 20px;
 }
 
 .main-container {
@@ -54,12 +60,18 @@ ul {
     list-style: none;
     display: flex;
     flex-direction: column;
+}
+
+ul.list-of-products {
     gap: 45px;
 }
 
 ul li {
+    display: flex;  
+}
+
+.card {
     border-bottom: 1px solid lightgrey;
-    display: flex;
     gap: 30px;
     height: 140px;
 }
@@ -80,4 +92,54 @@ color: lightgray;
 
 .order-overview {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-order {
+    align-items: center;
+}
+
+.order-overview-header {
+    margin-bottom: 64px;
+}
+
+.list-of-orders {
+    gap: 22px;
+    border-bottom: 2px solid #393333;
+    padding-bottom: 30px;
+}
+
+.remove-product {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #ffffff;
+    border: none;
+    color: #BBBBBB;
+    font-size: 12px;
+    padding: 7px 15px;
+}
+
+.total-price-product {
+    margin-left: auto;
+}
+
+.total-price-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+.complete-order-btn {
+    margin: 53px 0;
+    background-color: #16DB99;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: none;
+    padding: 18px 0;
+}
+
+.hidden {
+    display: none;
 }

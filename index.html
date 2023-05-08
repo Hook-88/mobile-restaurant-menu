@@ -22,49 +22,31 @@
             </header>
             <main>
                 <div class="container">
-                    <ul id="list-of-products">
-                        <li>
-                            <span class="product-icon">🍕</span>
-                            <div class="product-details">
-                                <h2>Pizza</h2>
-                                <p>pepperoni,mushrom,mozarella</p>
-                                <h4>$14</h4>
-                            </div>
-                            <i class="fa-sharp fa-solid fa-circle-plus add-btn"></i>
-                        </li>
-                        <li>
-                            <span class="product-icon">🍔</span>
-                            <div class="product-details">
-                                <h2>Pizza</h2>
-                                <p>beef, cheese, lettuce</p>
-                                <h4>$12</h4>
-                            </div>
-                            <i class="fa-sharp fa-solid fa-circle-plus add-btn"></i>
-                        </li>
-                        <li>
-                            <span class="product-icon">🍺</span>
-                            <div class="product-details">
-                                <h2>Beer</h2>
-                                <p>grain, hops, yeast, water</p>
-                                <h4>$12</h4>
-                            </div>
-                            <i class="fa-sharp fa-solid fa-circle-plus add-btn"></i>
-                        </li>
+                    <ul id="list-of-products" class="list-of-products">
+                        <!-- list of products -->
                     </ul>
                 
-                    <section id="order-overview" class="order-overview">
-                        <h2>Your order</h2>
-                        <div class="product-order">
-                            <h2>Pizza</h2>
-                            <button>remove</button>
-                            <h4>$14</h4>
-                        </div>
+                    <section id="order-overview" class="order-overview hidden">
+                        <h2 class="order-overview-header">Your order</h2>
+                        <ul class="list-of-orders">
+                            <li class="product-order">
+                                <h2>Pizza</h2>
+                                <button class="remove-product">remove</button>
+                                <h4 class="total-price-product">$14</h4>
+                            </li>
+                            <li class="product-order">
+                                <h2>Beer</h2>
+                                <button class="remove-product">remove</button>
+                                <h4 class="total-price-product">$12</h4>
+                            </li>
+                        </ul>
+
                         
                         <div class="total-price-container">
                             <h2>Total price</h2>
                             <h4>$14</h4>
                         </div>
-                        <button>Complete order</button>
+                        <button class="complete-order-btn">Complete order</button>
                     </section> 
             </div>
             </main>

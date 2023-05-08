@@ -7,7 +7,7 @@ let htmlElements = ''
 menuArray.forEach(function(product){
   
   htmlElements += `
-  <li>
+  <li class="card">
     <span class="product-icon">${product.emoji}</span>
     <div class="product-details">
         <h2>${product.name}</h2>
