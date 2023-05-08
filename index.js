@@ -16,6 +16,14 @@ function AddProductToCart(productId) {
     return product.id == productId
   })[0])
   renderContentOfCart()
+
+
+  let totalprice = userCart.reduce(function(a, b){
+    return a + b.price
+  },0)
+
+  console.log(totalprice)
+
 }
 
 function renderContentOfCart () {
@@ -32,7 +40,6 @@ function renderContentOfCart () {
     })
     cartContent.innerHTML = html
   }
-  
 }
 
 
