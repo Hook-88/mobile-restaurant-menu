@@ -15,15 +15,11 @@ function AddProductToCart(productId) {
   userCart.push(menuArray.filter(function(product){
     return product.id == productId
   })[0])
+  renderOrder()
+}
+
+function renderOrder() {
   renderContentOfCart()
-
-
-  let totalprice = userCart.reduce(function(a, b){
-    return a + b.price
-  },0)
-
-  console.log(totalprice)
-
 }
 
 function renderContentOfCart () {
@@ -39,7 +35,19 @@ function renderContentOfCart () {
       `
     })
     cartContent.innerHTML = html
+    renderTotalPrice()
   }
+}
+
+function renderTotalPrice() {
+  let totalprice = calculateTotalPrice()
+  document.getElementById('total-price-order').textContent = totalprice
+}
+
+function calculateTotalPrice() {
+  return userCart.reduce(function(a, b){
+    return a + b.price
+  },0)
 }
 
 
