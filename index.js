@@ -1,15 +1,39 @@
 import { menuArray } from '/data.js'
 
 const orderOverview = document.getElementById('order-overview')
+const cartContent = document.getElementById('list-of-orders')
+const userCart = []
 
 document.addEventListener('click', function(e) {
   if (e.target.dataset.add) {
     orderOverview.classList.remove('hidden')
-    
+    AddProductToCart(e.target.dataset.add)      
   }
-
-
 })
+
+function AddProductToCart(productId) {
+  userCart.push(menuArray.filter(function(product){
+    return product.id == productId
+  })[0])
+  renderContentOfCart()
+}
+
+function renderContentOfCart () {
+  let html = ''
+  if(userCart.length > 0) {
+    userCart.forEach(function (product) {
+      html += `
+      <li class="product-order">
+        <h2>${product.name}</h2>
+        <button class="remove-product" id="remove-product-btn-${product.id}">remove</button>
+        <h4 class="total-price-product">$${product.price}</h4>
+      </li>
+      `
+    })
+    cartContent.innerHTML = html
+  }
+  
+}
 
 
 function renderProducts() {
