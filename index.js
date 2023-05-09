@@ -10,19 +10,27 @@ document.addEventListener('click', function(e) {
     orderOverview.classList.remove('hidden')
     AddProductToCart(e.target.dataset.add)      
   } else if (e.target.dataset.remove) {
-    let index = userCart.findIndex(function(product){
-      return product.id === Number(e.target.dataset.remove)
-    })
-    userCart.splice(index, 1)
-    renderOrder()
+    removeProductFromCart(e.target.dataset.remove)
   }
 
 })
 
+function removeProductFromCart(productId) {
+  userCart = userCart.filter(function (product) {
+    return product.id !== productId
+  })
+  renderOrder()
+}
+
 function AddProductToCart(productId) {
-  const uniqueProduct = menuArray.filter(function(product){
+  const product = menuArray.filter(function(product){
     return product.id == productId
   })[0]
+  const uniqueProduct = {
+    name: product.name,
+    price: product.price,
+    id: uuidv4()
+  }
   userCart.push(uniqueProduct)
   renderOrder()
 }
@@ -61,7 +69,6 @@ function calculateTotalPrice() {
   },0)
 }
 
-
 function renderProducts() {
   const listOfProducts = document.getElementById('list-of-products')
 
@@ -86,12 +93,3 @@ function renderProducts() {
 }
 
 renderProducts()
-
-
-
-let index = menuArray.findIndex(function (product) {
-  return product.id === 0
-})
-
-console.log(index)
-

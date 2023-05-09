@@ -144,3 +144,12 @@ color: lightgray;
 .hidden {
     display: none;
 }
+
+.checkout-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkout-card input {
+    margin: 0 20px;
+}
