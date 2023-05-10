@@ -26,7 +26,7 @@
                         <!-- list of products -->
                     </ul>
                 
-                    <section id="order-overview" class="order-overview hidden">
+                    <section id="order-overview" class="order-overview">
                         <h2 class="order-overview-header">Your order</h2>
                         <ul class="list-of-orders" id="list-of-orders">
                             <!-- content of cart -->
@@ -35,10 +35,10 @@
                             <h2>Total price</h2>
                             <h4>$<span id="total-price-order"></span></h4>
                         </div>
-                        <button class="complete-order-btn">Complete order</button>
+                        <button class="complete-order-btn" id="complete-order-btn">Complete order</button>
                     </section>
                     
-                    <section class="checkout-card hidden">
+                    <section class="checkout-card hidden" id="checkout-card-form">
                         <form onsubmit="event.preventDefault()">
                             <h3>Enter card details</h3>
                             <input type="text" name="" id="" placeholder="Enter your name" required>

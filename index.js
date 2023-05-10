@@ -5,6 +5,10 @@ const orderOverview = document.getElementById('order-overview')
 const cartContent = document.getElementById('list-of-orders')
 let userCart = []
 
+document.getElementById('complete-order-btn').addEventListener('click', function (e) {
+  document.getElementById('checkout-card-form').classList.remove('hidden')
+})
+
 document.addEventListener('click', function(e) {
   if (e.target.dataset.add) {
     orderOverview.classList.remove('hidden')
@@ -12,7 +16,6 @@ document.addEventListener('click', function(e) {
   } else if (e.target.dataset.remove) {
     removeProductFromCart(e.target.dataset.remove)
   }
-
 })
 
 function removeProductFromCart(productId) {
