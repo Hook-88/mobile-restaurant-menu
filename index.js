@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 const orderOverview = document.getElementById('order-overview')
 const cartContent = document.getElementById('list-of-orders')
 const checkOutForm = document.getElementById('checkout-card-form')
+const checkoutMessage = document.getElementById('checkout-message')
 let userCart = []
 
 const form = checkOutForm.firstElementChild
-console.log(form)
 
 form.addEventListener('submit', function (e) {
   e.preventDefault()
@@ -17,6 +17,10 @@ form.addEventListener('submit', function (e) {
 
   checkOutForm.classList.add('hidden')
   orderOverview.classList.add('hidden')
+
+  checkoutMessage.classList.remove('hidden')
+
+  checkoutMessage.querySelector('span').innerText =  name
 
 })
 
