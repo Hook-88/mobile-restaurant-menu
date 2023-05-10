@@ -130,7 +130,7 @@ color: lightgray;
     margin-top: 14px;
 }
 
-.complete-order-btn {
+.complete-order-btn, .btn {
     margin: 53px 0;
     background-color: #16DB99;
     color: #ffffff;
@@ -146,10 +146,43 @@ color: lightgray;
 }
 
 .checkout-card {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    padding: 23px;
+    box-shadow: 0px 0px 500px grey;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 500px;
+    height: 543px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.checkout-card h3 {
+    font-weight: 700;
+    margin: 22px 0 22px 0;
+}
+
+.checkout-card form {
     display: flex;
     flex-direction: column;
+    gap: 23px;
+}
+
+.checkout-card .btn {
+    margin-top: 23px;
+    margin-bottom: 0px;
 }
 
 .checkout-card input {
-    margin: 0 20px;
+    font-size: 20px;
+    color: #757575;
+    line-height: 31px;
+    padding: 15px 25px;
+    border: 1px solid #757575;
+    border-radius: 4px;
 }
