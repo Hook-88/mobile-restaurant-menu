@@ -186,3 +186,14 @@ color: lightgray;
     border: 1px solid #757575;
     border-radius: 4px;
 }
+
+.checkout-message {
+    font-size: 32px;
+    text-align: center;
+    background-color: #ECFDF5;
+    color: #065F46;
+    font-weight: 400;
+    padding: 50px;
+    border-radius: 3px;
+    margin-top: 45px;
+}
