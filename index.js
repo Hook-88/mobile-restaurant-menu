@@ -22,6 +22,7 @@ form.addEventListener('submit', function (e) {
 
   checkoutMessage.querySelector('span').innerText =  name
   userCart.length = 0
+  form.reset() 
 
 })
 
