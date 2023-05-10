@@ -3,10 +3,25 @@ import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
 
 const orderOverview = document.getElementById('order-overview')
 const cartContent = document.getElementById('list-of-orders')
+const checkOutForm = document.getElementById('checkout-card-form')
 let userCart = []
 
+const form = checkOutForm.firstElementChild
+console.log(form)
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault()
+
+  const checkoutFormData = new FormData(form)
+  const name = checkoutFormData.get('fullName')
+
+  checkOutForm.classList.add('hidden')
+  orderOverview.classList.add('hidden')
+
+})
+
 document.getElementById('complete-order-btn').addEventListener('click', function (e) {
-  document.getElementById('checkout-card-form').classList.remove('hidden')
+  checkOutForm.classList.remove('hidden')
 })
 
 document.addEventListener('click', function(e) {
