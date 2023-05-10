@@ -21,6 +21,7 @@ form.addEventListener('submit', function (e) {
   checkoutMessage.classList.remove('hidden')
 
   checkoutMessage.querySelector('span').innerText =  name
+  userCart.length = 0
 
 })
 
@@ -31,6 +32,10 @@ document.getElementById('complete-order-btn').addEventListener('click', function
 document.addEventListener('click', function(e) {
   if (e.target.dataset.add) {
     orderOverview.classList.remove('hidden')
+    if(!checkoutMessage.classList.contains('hidden')) {
+      checkoutMessage.classList.add('hidden')
+    }
+
     AddProductToCart(e.target.dataset.add)      
   } else if (e.target.dataset.remove) {
     removeProductFromCart(e.target.dataset.remove)
